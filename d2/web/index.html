@@ -37,7 +37,126 @@
 	<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600&display=swap" rel="stylesheet">
 	
 	<!-- //Web-Fonts -->
+<style>
+.section-title {
+	position: relative
+}
+.section-title p {
+	font-size: 16px;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+.section-title h4 {
+	font-size: 40px;
+	font-weight: 600;
+	text-transform: capitalize;
+	position: relative;
+	padding-bottom: 20px;
+	display: inline-block
+}
+.section-title h4:before {
+	position: absolute;
+	content: "";
+	width: 80px;
+	height: 2px;
+	background-color: #f1cf69;
+	bottom: 0;
+	left: 50%;
+	margin-left: -40px;
+}
+.section-title h4:after {
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 2px;
+	background-color: #f1cf69;
+	left: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -25px;
+}
+.pt-100 {
+	padding-top: 100px;
+}
+.pb-100 {
+	padding-bottom: 100px;
+}
+.mb-100{
+    margin-bottom:100px;
+}
+.services {
+	background-color: #FBFBFB;
+}
+.single-service {
+	position: relative;
+	text-align: center;
+	margin-bottom: 50px;
+	-webkit-transition: .3s;
+	transition: .3s;
+	padding: 30px 20px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16)
+}
+.single-service:before {
+	position: absolute;
+	width: 0;
+	height: 0;
+	background-color: #f1cf69;
+	left: 0;
+	top: 0;
+	content: "";
+	-webkit-transition: .3s;
+	transition: .3s
+}
+.single-service:after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	background-color: #f1cf69;
+	right: 0;
+	bottom: 0;
+	content: "";
+	-webkit-transition: .3s;
+	transition: .3s
+}
+.single-service:hover:after,
+.single-service:hover:before {
+	width: 50%;
+	height: 2px;
+	-webkit-transition: .3s;
+	transition: .3s
+}
+.single-service:hover {
+	box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.10)
+}
+.single-service i.fa {
+	font-size: 20px;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #ddd;
+	line-height: 60px;
+	margin-bottom: 30px;
+	border-radius: 50%;
+	-webkit-transition: .3s;
+	transition: .3s
+}
+.single-service:hover i.fa {
+	background-color: #f1cf69;
+	color: #fff;
+	border-color: #f1cf69;
+	border-radius: 0;
+}
+.single-service h4 {
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+}
+.single-service p {
+	font-size: 15px;
+	line-height: 1.8;
+}
 
+</style>
 </head>
 
 <body>
@@ -92,7 +211,7 @@
 						<h3 class="pb-md-4 pb-3">Expert Financial Advice</h3>
 						<p>With over 20 years of experience we'll ensure you always get the best guidance</p>
 						<div class="cont-btn mt-3">
-							<a class="btn text-uppercase" href="about.html">Learn More</a>
+							<a class="btn text-uppercase" href="contact.html">Learn More</a>
 							<a class="btn active text-uppercase ml-2" href="projects.html">Our Projects</a>
 						</div>
 					</div>
@@ -101,10 +220,10 @@
 			<div class="carousel-item">
 				<div class=" banner-slider2">
 					<div class="banner-agile-text text-center text-white">
-						<h3 class="pb-md-4 pb-3">Solutions that never miss the aim</h3>
-						<p>With over 20 years of experience we'll ensure you always get the best guidance</p>
+						<h3 class="pb-md-4 pb-3">Minimize Tax Deduction</h3>
+						<p>Our experts masters tax law ensures you always get the best guidance</p>
 						<div class="cont-btn mt-3">
-							<a class="btn text-uppercase" href="about.html">Learn More</a>
+							<a class="btn text-uppercase" href="contact.html">Learn More</a>
 							<a class="btn active text-uppercase ml-2" href="projects.html">Our Projects</a>
 						</div>
 					</div>
@@ -113,8 +232,8 @@
 			<div class="carousel-item">
 				<div class=" banner-slider3">
 					<div class="banner-agile-text text-center text-white">
-						<h3 class="pb-md-4 pb-3">Expert Financial Advice</h3>
-						<p>With over 20 years of experience we'll ensure you always get the best guidance</p>
+						<h3 class="pb-md-4 pb-3">Quick , Genuine & Authentic</h3>
+						<p>You can provide us all details and we ensure we wont disclouse with anyone , Build trust and Relationship.</p>
 						<div class="cont-btn mt-3">
 							<a class="btn text-uppercase" href="about.html">Learn More</a>
 							<a class="btn active text-uppercase ml-2" href="projects.html">Our Projects</a>
@@ -135,61 +254,83 @@
 	</div>
 	<!-- //banner slider -->
 	<!-- //banner -->
-	  <div class="agileits-services py-md-5 py-4" id="services">
-        <div class="container py-lg-5">
-				 <h3 class="title text-center pb-md-3 mb-3">What We Do</h3>
-            <div class="agileits-services-row row text-center">
-                <div class="col-lg-4 col-md-6 mt-3 pt-lg-3">
-                    <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                      <i class="fas fa-dollar-sign"></i>
-                        <h4>Financial Planning</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur. </p>
-                        <a href="about.html" class="service-btn">Learn more</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-3 pt-lg-3">
-                    <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                       <i class="fas fa-coffee"></i>
-                        <h4>Retirement Planning</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur. </p>
-                        <a href="about.html" class="service-btn">Learn more</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-3 pt-lg-3">
-                    <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                        <i class="fas fa-signal"></i>
-                        <h4>Risk Management</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur.</p>
-                        <a href="about.html" class="service-btn">Learn more</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-3 pt-lg-5">
-                    <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                       <i class="fas fa-briefcase"></i>
-                        <h4>Taxation</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur.</p>
-                        <a href="about.html" class="service-btn">Learn more</a>
-                    </div>
-                </div>
-				<div class="col-lg-4 col-md-6  mt-3 pt-lg-5">
-                    <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                     <i class="fas fa-dollar-sign"></i>
-                        <h4>Financial Planning</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur.</p>
-                        <a href="about.html" class="service-btn">Learn more</a>
-                    </div>
-                </div>
-				<div class="col-lg-4 col-md-6  mt-3 pt-lg-5">
-                    <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                      <i class="fas fa-coffee"></i>
-                       <h4>Retirement Planning</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur.</p>
-                        <a href="about.html" class="service-btn">Learn more</a>
-                    </div>
-                </div>
+	
+	 <section class="services pt-100 pb-50" id="services">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 mx-auto text-center">
+                  <div class="section-title mb-100">
+                     <p>what i can do</p>
+                     <h4>my services</h4>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+            <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <!-- Single Service -->
+                  <div class="single-service">
+                     <i class="fa fa-laptop"></i>
+                     <h4>Tax Return </h4>
+                     <p>Income tax filing , Tax Return , Compliance Filing , E-Filing </p>
+<a href="contact.html" class="service-btn">Learn more</a>                 
+                  
+</div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <!-- Single Service -->
+                  <div class="single-service">
+                     <i class="fa fa-rupee-sign"></i>
+                     <h4>GST </h4>
+                     <p>GST Registeration , IGST & GST Filing . </p>
+<a href="contact.html" class="service-btn">Learn more</a>                 
+                  
+</div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <!-- Single Service -->
+                  <div class="single-service">
+                     <i class="fa fa-mobile"></i>
+                     <h4>TDS Return</h4>
+                     <p> 
+					 
+					 E-Filing , TDS Refund and Other valuable services.</p>
+<a href="contact.html" class="service-btn">Learn more</a>                 
+                  
+</div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <!-- Single Service -->
+                  <div class="single-service">
+                     <i class="fa fa-edit"></i>
+                     <h4>Audit Report</h4>
+                     <p>Individual & Firm Audit,Annual Report , CA Certificate. </p>
+<a href="contact.html" class="service-btn">Learn more</a>                 
+                 
+ </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <!-- Single Service -->
+                  <div class="single-service">
+                      <i class="fa fa-briefcase"></i>
+                     <h4>Business Consulting</h4>
+                     <p>LLP,Trust/NGO , Trademark Registration .Company Law Matter Handling .  </p>
+<a href="contact.html" class="service-btn">Learn more</a>                 
+                  
+</div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <!-- Single Service -->
+                  <div class="single-service">
+                     <i class="fa fa-user"></i>
+                     <h4>Accounting</h4>
+                     <p>Business accounting services for MSME and all business. </p>
+<a href="contact.html" class="service-btn">Learn more</a>                 
+ </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
  <!-- /story -->
     <section class="freebies bg-light pt-md-5 pt-3">
         <div class="container-fluid">
@@ -200,9 +341,9 @@
                             <figcaption class="overlay">
                                <div class="freebie-content">
                                     <h4>Investment advising</h4>
-									<p class="invest text-white mx-auto mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur. Eius eum inventore consectetur.</p>
+									<p class="invest text-white mx-auto mb-3">We provide investment advises for your future . Secure your future with us and secure your life for your dear ones.</p>
                                     <div class="group log-in">
-                                        <a class="hover-2 btn text-uppercase" href="about.html">Read More</a>
+                                        <a class="hover-2 btn text-uppercase" href="contact.html">Read More</a>
                                     </div>
                                 </div>
                             </figcaption>
@@ -215,8 +356,8 @@
                         <figure class="news-overlay">
                             <figcaption class="overlay">
                                 <div class="freebie-content">
-                                    <h4>Business planning</h4>
-									<p class="invest text-white mx-auto mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur. Eius eum inventore consectetur.</p>
+                                    <h4>Business Consulting</h4>
+									<p class="invest text-white mx-auto mb-3">We provide business consulting based on your business outcome and target .Our experts analyze and reaserch to provide you fully customized solution.</p>
                                     <div class="group log-in">
                                         <a class="hover-2 btn text-uppercase" href="about.html">Read More</a>
                                     </div>
@@ -239,49 +380,33 @@
                     <div class="item">
                         <div class="feedback-info text-center">
 							<div class="feedback-img mx-auto">
-                                <img src="images/ts1.jpg" class="img-fluid rounded-circle" alt="" />
+                                <img src="images/tr1.jpg" class="img-fluid rounded-circle" alt="" />
                             </div>
                             <div class="feedback-top">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.</p>
+                                <p>We took help of Mr Braj Bhusan to Explore business consulting in Hazaribagh . His services were of high quality.</p>
                             </div>
                             <div class="feedback-grids">
                                 <div class="feedback-img-info">
-                                    <h5>Franklin</h5>
-                                    <p>Vestibulum <span>(Company)</span></p>
+                                    <h5>Hazari Bagh</h5>
+                                    <p>Vestige <span>(Company)</span></p>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="item">
                         <div class="feedback-info text-center">
 							<div class="feedback-img mx-auto">
-                                <img src="images/ts3.jpg" class="img-fluid rounded-circle" alt="" />
+                                <img src="images/tr2.jpg" class="img-fluid rounded-circle" alt="" />
                             </div>
                             <div class="feedback-top">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.</p>
+                                <p>Tax Care is expert in GST filing and accounting for our company .Really thankfull for the help.</p>
                             </div>
                             <div class="feedback-grids">
                                 <div class="feedback-img-info">
-                                    <h5>Mcmillan</h5>
-                                    <p>Vestibulum <span>(Company)</span></p>
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="feedback-info text-center">
-							<div class="feedback-img mx-auto">
-                                <img src="images/ts4.jpg" class="img-fluid rounded-circle" alt="" />
-                            </div>
-                            <div class="feedback-top">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore.</p>
-                            </div>
-                            <div class="feedback-grids">
-                                <div class="feedback-img-info">
-                                    <h5>Jasmine</h5>
-                                    <p>Vestibulum <span>(Company)</span></p>
+                                    <h5>Kolkata</h5>
+                                    <p>4Bits Solutions <span>(Company)</span></p>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
@@ -335,8 +460,7 @@
 		<div class="container py-xl-5 py-lg-3">
 			<h3 class="title text-center pb-md-3 mb-3">
 				Newsletter</h3>
-			<p class="mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam Sed
-				ut perspiciatis unde omnis iste natus error sit.</p>
+			<p class="mb-5">Susbcribe below to get latest news and updates on Tax Care.</p>
 			<form action="#" method="post">
 				<input type="email" name="email" placeholder="Enter your Email..." required="">
 				<input type="submit" value="Submit">
